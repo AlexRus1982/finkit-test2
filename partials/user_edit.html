@@ -1,0 +1,41 @@
+<div class="modal_head">
+    <i class="icon_close" onclick="common.modal_hide()"></i>
+</div>
+<div id="user_modal" class="modal_body">
+
+    <!--#region fields -->
+    <div class="input_group_modal">
+        <div>First name</div>
+        <input type="text" id="first_name" value="{$user.first_name}" oninput="common.user_check_fields(event);">
+    </div>
+
+    <div class="input_group_modal">
+        <div>Last name</div>
+        <input type="text" id="last_name" value="{$user.last_name}" oninput="common.user_check_fields(event);">
+    </div>
+
+    <div class="input_group_modal">
+        <div>Phone</div>
+        <input type="tel" id="phone" value="{$user.phone}" oninput="common.user_check_fields(event);">
+    </div>
+
+    <div class="input_group_modal">
+        <div>Email</div>
+        <input type="email" id="email" value="{$user.email}" oninput="common.user_check_fields(event);" style="text-transform: lowercase;">
+    </div>
+    
+    <div class="input_group_modal">
+        <div>Plots</div>
+        <input type="text" id="plots" value="{$user.plots}" oninput="common.user_check_fields(event);">
+    </div>
+    <!--#endregion fields -->
+
+    <div class="modal_controls">
+        <div>
+            <button id="user_save_button" type="button" class="btn_modal" disabled onclick="common.user_edit_update({$user.user_id});">Save</button>
+        </div>
+        <div>
+            <div class="btn_modal light" onclick="common.modal_hide();">Cancel</div>
+        </div>
+    </div>
+</div>
